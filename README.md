@@ -11,7 +11,21 @@ Built using FastAPI • React • MongoDB • Chart.js • Tailwind CSS
 
 ## 📘 Overview
 
-PlacementIQ is an intelligent college placement management system designed to streamline and optimize the campus recruitment process. It provides institutions with powerful tools to manage student data, track company interactions, organize placement drives, and gain valuable insights through advanced analytics.
+# PlacementIQ
+
+**Intelligent College Placement Management System**
+
+PlacementIQ is a comprehensive web application designed to streamline and manage college placement activities. Built with modern technologies, it provides real-time analytics, data management, and insights for placement coordinators and administrators.
+
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://placementiq.vercel.app)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green)](https://fastapi.tiangolo.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-6.0-green)](https://www.mongodb.com/)
+
+---
+
+## 🌟 Features
 
 The system helps placement coordinators make data-driven decisions by providing real-time statistics, interactive visualizations, and comprehensive reporting capabilities.
 
@@ -70,65 +84,55 @@ The system helps placement coordinators make data-driven decisions by providing 
 - **PostCSS**: CSS processing
 - **Craco**: Create React App configuration override
 
-## 🧩 Setup Instructions
+## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.11+
-- Node.js 18+ and Yarn
-- MongoDB 4.4+
+- Node.js 16+ and npm
+- Python 3.8+
+- MongoDB 4.0+
 
-### Backend Setup
+### Installation
 
-1. **Navigate to backend directory**
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Romio1310/PlacementIQ.git
+   cd PlacementIQ
+   ```
+
+2. **Backend Setup**
    ```bash
    cd backend
-   ```
-
-2. **Install Python dependencies**
-   ```bash
    pip install -r requirements.txt
+   cp ../.env.example .env
+   # Edit .env with your MongoDB URL
    ```
 
-3. **Configure environment variables**
-   Create a `.env` file:
-   ```env
-   MONGO_URL=mongodb://localhost:27017
-   DB_NAME=placementiq_db
-   JWT_SECRET_KEY=your-secret-key-here
-   CORS_ORIGINS=*
-   ```
-
-4. **Run the server**
-   ```bash
-   uvicorn server:app --reload --host 0.0.0.0 --port 8001
-   ```
-
-   The backend will auto-seed sample data on first run.
-
-### Frontend Setup
-
-1. **Navigate to frontend directory**
+3. **Frontend Setup**
    ```bash
    cd frontend
+   npm install --legacy-peer-deps
+   echo "REACT_APP_BACKEND_URL=http://localhost:8000" > .env
    ```
 
-2. **Install dependencies**
+4. **Run the Application**
+   
+   Terminal 1 (Backend):
    ```bash
-   yarn install
+   cd backend
+   python3 -m uvicorn server:app --reload --port 8000
    ```
-
-3. **Configure environment variables**
-   Create a `.env` file:
-   ```env
-   REACT_APP_BACKEND_URL=http://localhost:8001
-   ```
-
-4. **Run the development server**
+   
+   Terminal 2 (Frontend):
    ```bash
-   yarn start
+   cd frontend
+   npm start
    ```
 
-   The application will open at `http://localhost:3000`
+5. **Access the app** at http://localhost:3000
+
+📖 For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md)
+
+## 🎯 Usage
 
 ### Auto-Seeding Data
 
@@ -200,22 +204,24 @@ Comprehensive data table with search, filter, and CRUD operations.
 
 ## 🚀 Live Demo
 
-**Live Application**: [https://placementiq.preview.emergentagent.com](https://placementiq.preview.emergentagent.com)
+**Application:** Deploy to Vercel (see [DEPLOYMENT.md](DEPLOYMENT.md))
 
-### Demo Credentials
-- **Username**: admin
-- **Password**: admin123
+### Getting Started
+1. Register a new admin account at `/register`
+2. Login at `/login`  
+3. Explore the dashboard and features
+4. The system auto-seeds sample data on first startup
 
-*Note: Register your own account or use the demo credentials to explore all features.*
+---
 
-## 👤 Author & Contact
+## 👨‍💻 Author
 
-**Anwesha Kar**  
-Full Stack Developer | Data Analytics Enthusiast
+**GitHub**: [@Romio1310](https://github.com/Romio1310)  
+**Repository**: [PlacementIQ](https://github.com/Romio1310/PlacementIQ)
 
-- **GitHub**: [github.com](https://github.com)
-- **LinkedIn**: [linkedin.com](https://linkedin.com)
-- **Email**: contact@example.com
+---
+
+**⭐ If you find this project helpful, please give it a star!**
 
 ## 📝 License
 
