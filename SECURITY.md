@@ -133,7 +133,7 @@ git push origin --force --all
 #### Railway/Render (Backend):
 - Go to Environment Variables section
 - Add:
-  - `MONGO_URL=mongodb+srv://user:password@cluster.mongodb.net/placementiq_db`
+  - `MONGO_URL=mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.mongodb.net/placementiq_db`
   - `JWT_SECRET_KEY=<your-strong-random-secret>`
   - `CORS_ORIGINS=https://your-frontend.vercel.app`
 

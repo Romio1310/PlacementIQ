@@ -88,8 +88,8 @@ You need to deploy the backend separately. Choose one:
 4. **Root Directory**: `backend`
 5. **Add Environment Variables**:
    ```
-   MONGO_URL=mongodb+srv://username:password@cluster.mongodb.net/placementiq_db
-   JWT_SECRET_KEY=your-super-secret-key-here
+   MONGO_URL=mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.mongodb.net/placementiq_db
+   JWT_SECRET_KEY=<generate-strong-random-32-char-secret>
    CORS_ORIGINS=https://your-frontend.vercel.app
    ```
 6. Railway auto-detects Python and deploys!
@@ -109,7 +109,7 @@ See detailed instructions in `DEPLOYMENT.md`
 4. Whitelist IP: `0.0.0.0/0` (allow all)
 5. Get connection string:
    ```
-   mongodb+srv://username:password@cluster.mongodb.net/placementiq_db
+   mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.mongodb.net/placementiq_db
    ```
 6. Use this in Railway/Render backend deployment
 

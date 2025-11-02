@@ -206,7 +206,7 @@ git push heroku `git subtree split --prefix backend main`:main --force
 2. Create free cluster
 3. Create database user
 4. Whitelist IP: `0.0.0.0/0` (allow all - or specific IPs)
-5. Get connection string: `mongodb+srv://username:password@cluster.mongodb.net/placementiq_db`
+5. Get connection string: `mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.mongodb.net/placementiq_db`
 6. Use this as `MONGO_URL` in your backend deployment
 
 ---
@@ -215,10 +215,10 @@ git push heroku `git subtree split --prefix backend main`:main --force
 
 ### Backend (.env)
 ```bash
-MONGO_URL=mongodb+srv://user:pass@cluster.mongodb.net/placementiq_db
+MONGO_URL=mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>.mongodb.net/placementiq_db
 DB_NAME=placementiq_db
 CORS_ORIGINS=https://your-frontend.vercel.app
-JWT_SECRET_KEY=your-super-secret-jwt-key-min-32-chars
+JWT_SECRET_KEY=<generate-strong-random-32-char-secret>
 ```
 
 ### Frontend (.env)
