@@ -1,8 +1,8 @@
-# Git Mailmap - Maps old identities to current ones
-# This helps consolidate contributor identities
+# Git Mailmap - Properly attribute commits to actual developers
+# This consolidates automated commits to the real project contributors
 
-# Map emergent commits to the actual developer
+# Map emergent platform's automated commits to the main developer
 Gurdeep Singh <137512027+Romio1310@users.noreply.github.com> emergent-agent-e1 <github@emergent.sh>
 
-# Consolidate all identities to primary account
-Gurdeep Singh <137512027+Romio1310@users.noreply.github.com> Ak-369-1729 <anwesha.hogwarts@gmail.com>
+# Keep Anni_codes as separate contributor (actual team member)
+# Ak-369-1729 (Anni_codes) <anwesha.hogwarts@gmail.com> - Real contributor
