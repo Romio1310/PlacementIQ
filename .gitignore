@@ -38,6 +38,7 @@ dist
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*.local
 backend/.env
 backend/.env.*
 frontend/.env
@@ -46,6 +47,7 @@ frontend/.env.*
 *credentials.json*
 config.json
 secrets.json
+*.env.backup
 
 # API Keys and Secrets
 *.key
@@ -56,6 +58,10 @@ secrets.json
 .secrets
 *secret*
 *SECRET*
+jwt_secret*
+api_key*
+*.certificate
+*.crt
 
 # Database files
 *.db
@@ -91,6 +97,13 @@ chainlit.md
 
 # Deployment
 .vercel
+.vercel/
+*.vercel
+.railway/
+.render/
+.heroku/
+railway.json
+render.yaml
 
 # Data and databases
 agenthub/agents/youtube/db

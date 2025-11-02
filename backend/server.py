@@ -32,7 +32,14 @@ api_router = APIRouter(prefix="/api")
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # JWT settings
-SECRET_KEY = os.environ.get("JWT_SECRET_KEY", "placementiq-secret-key-2025")
+# CRITICAL: JWT_SECRET_KEY must be set in .env file - no default fallback for security
+if "JWT_SECRET_KEY" not in os.environ:
+    raise ValueError(
+        "❌ SECURITY ERROR: JWT_SECRET_KEY is not set in environment variables!\n"
+        "Create a .env file in the backend directory with a strong random secret.\n"
+        "Example: JWT_SECRET_KEY=your-super-secret-random-string-min-32-characters"
+    )
+SECRET_KEY = os.environ["JWT_SECRET_KEY"]
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 1440  # 24 hours
 
